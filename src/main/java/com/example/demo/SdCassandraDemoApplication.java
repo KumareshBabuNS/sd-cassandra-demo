@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class SdCassandraDemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SdCassandraDemoApplication.class, args);
+	}
+	
+	@Bean
+	public CommandLineRunner loader(BookRepository repo) {
+	  return new CommandLineRunner() {
+      
+      @Override
+      public void run(String... args) throws Exception {
+        repo.insert(new Book("1234567890", "Knitting with Dog Hair", "Kendall Crolius"));
+        repo.insert(new Book("9876543210", "Crafting with Cat Hair", "Sue Smith"));
+      }
+    };
+	}
+	
+}
