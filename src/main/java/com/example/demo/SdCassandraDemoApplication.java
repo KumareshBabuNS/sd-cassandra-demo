@@ -18,8 +18,9 @@ public class SdCassandraDemoApplication {
       
       @Override
       public void run(String... args) throws Exception {
-        repo.insert(new Book("1234567890", "Knitting with Dog Hair", "Kendall Crolius"));
-        repo.insert(new Book("9876543210", "Crafting with Cat Hair", "Sue Smith"));
+        repo.insert(new Book("0312152906", "Knitting with Dog Hair", "Kendall Crolius"));
+        repo.insert(new Book("1594745250", "Crafting with Cat Hair", "Kaori Tsutaya"));
+        repo.insert(new Book("1617292540", "Spring Boot in Action", "Craig Walls"));
       }
     };
 	}
